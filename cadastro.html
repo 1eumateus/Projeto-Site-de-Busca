@@ -8,25 +8,22 @@
     <link rel="stylesheet" href="./css/cadastro.css">
 </head>
 <body>
-    <div class="container">
-        <form>
+    <div class="container" id="registerModal">
+        <form id="registerForm">
             <h1>Criar uma conta nova</h1>
             <!-- Nome -->
-            <div class="input-box">
+            <div class="input-box" id="registerFirstName">
                 <input  type="text" placeholder="Nome" required>
             </div>
-
-            <!-- Sobrenome -->
-            <div class="input-box" >
-                <input type="text" placeholder="Sobre nome">
-            </div><!-- E-mail -->
-            
-            <div class="input-box" >
+            <div class="input-box" id="registerEmail">
                 <input type="email" placeholder="E-mail" required>
             </div>
 
             <div class="input-box">
-                <input type="password" placeholder="Senha" required>
+                <input type="password" placeholder="Senha" required id="registerPassword">
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Confirmar Senha" required id="registerConfirmPassword">
             </div>
             <button class="submit" type="submit">Cadastrar</button>
             
@@ -34,6 +31,8 @@
         <div>
             <a class="telaLogin" href="login.html">Já tem uma conta?</a>
         </div>
+        
     </div><!--container-->
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
