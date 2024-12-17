@@ -17,8 +17,6 @@ const corsOptions = {
     credentials: true, 
 };
 
-
-
 app.use(express.json());
 app.use(cors(corsOptions));
 
@@ -82,11 +80,37 @@ app.post('/register', async (req, res) => {
 });
 
 
+// Rota de Login
+app.post('/login', async (req, res) => {
 
+    const { email, password } = req.body;
 
+    try {
+        const user = await User.findOne({ email });
+
+        if (!user) {
+            return res.status(400).json({ message: 'Credenciais inválidas, Email incorreto.' });
+        }
+
+        const isMatch = await bcrypt.compare(password, user.password);
+
+        if (!isMatch) {
+            return res.status(400).json({ message: 'Credenciais inválidas, Senha Incorreta.' });
+        }
+        const token = jwt.sign({ id: user._id, firstName: user.firstName }, JWT_SECRET, { expiresIn: '1h' });
+
+        res.status(200).json({
+            token,
+            firstName: user.firstName,
+        });
+    } catch (error) {
+        res.status(500).json({ message: 'Erro no servidor', error });
+    }
+});
 
 
 // Iniciar o servidor
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+
