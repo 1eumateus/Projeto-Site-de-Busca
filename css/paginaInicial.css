@@ -1,0 +1,85 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+@font-face {
+    font-family: nexa;
+    src: url(/fontes/Nexa-Heavy.ttf);
+}
+.first-content{
+    display: flex;
+    width: 100%;
+    background-color: rgb(53, 224, 90);
+}
+
+.first-column{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+}
+.second-content{
+    display: inline;
+    align-content: center;
+    justify-content: center;
+    width: 1500px;
+    padding-left: 25%;
+
+}
+.second-content input{
+    border: none;
+    border-radius: 10px;
+    height: 50%;
+    width: 60%;
+    padding-left: 10px;
+    
+}
+.third-column{
+    width: 30%;
+    align-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding-right: 20px;
+    
+}
+.submit{
+    margin-left: -30px;
+    color: rgb(52, 137, 40);
+}
+.saudacao{
+    display: flex;
+    font-family: nexa;
+    margin-top: 6%;
+    width:  1300px;
+    margin-left: 8%;
+    padding: 10px;
+    border-radius: 10px;
+    height: 90%;
+    font-size: 35px;
+    background-color: rgb(53, 224, 90);
+    color: rgb(255, 255, 255);
+    padding-bottom: 20px;
+
+    
+    
+}
+.texto2{
+    padding-top: 20px;
+}
+.tiposdemedicamentos{
+    
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    
+}
+
+
+
+h3{
+    font-size: 20px;
+}

@@ -1,0 +1,74 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.container{
+    width: 420px;
+    background: rgb(142, 236, 142);
+    border-radius: 10px ;
+    color: #fff;
+    padding: 50px 40px 30px 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0,.2);
+}
+.container h1{
+    font-size: 32px;
+    text-align: center;
+   
+}.input-box{
+    position: relative;
+    width: 100%;
+    height: 25px;
+    margin: 30px 0;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16;
+    color: #134617;
+    padding: 20px 45px 20px 20px;
+    border: 2px solid rgb(103, 160, 104);
+
+}
+
+.submit{
+    
+    width: 50%;
+    font-size: 15px;
+    background-color: rgb(11, 192, 11);
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 90px;
+    color: rgb(18, 94, 18);
+
+    cursor: pointer;
+
+    
+    
+}
+.cadastrar:hover{
+    background-color: rgb(11, 219, 46);
+
+    
+}
+
+.telaLogin{
+    width: 100%;
+    align-items: center;
+    text-decoration: none;
+    margin-left:32%;
+
+}
+.telaLogin:hover{
+    text-decoration: underline;
+}

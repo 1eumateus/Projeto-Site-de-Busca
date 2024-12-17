@@ -1,0 +1,26 @@
+.container{
+    width: 420px;
+    border-radius: 10px;
+    color: #fff;
+    padding: 50px 40px 30px 40px;
+
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border:none;
+    /* linha ao redor do espaço */
+    outline: none;
+    font-size: 16;
+    color: #09530e;
+    padding: 20px 45px 20px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(162, 230, 163);
+
+}
+.telaLogin{
+    margin-top: 10px;
+    text-align: center;
+}

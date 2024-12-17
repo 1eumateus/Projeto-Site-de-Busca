@@ -1,0 +1,125 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    width: 700px;
+    height: 450px;
+    background: rgb(255, 255, 255);
+    border: 2px solid;
+ 
+    color: #fff;
+    padding: 50px 40px 30px 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0,.2);
+    display: flex;
+}
+.container h1{
+    font-size: 36px;
+    text-align: center;
+}
+.first-content{
+
+    margin:30px 30px 30px 10px;
+
+}
+
+.second-content{
+    height: 450px;
+    width: 500px;
+    margin-right: -43px;
+    margin-top: -51.5px;
+    border: 2px solid rgb(116, 231, 116);
+    background: rgb(116, 231, 116);
+    padding: 50px;
+    
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 25px;
+    margin: 30px 0;
+}
+.paginaInicial{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0f8402;
+    text-decoration: none;
+    margin-top: 20px;
+}
+/* mexe nos espaços do formulário */
+.input-box input{
+    
+    height: 100%;
+    background-color: transparent;
+    border:none;
+    /* linha ao redor do espaço */
+    outline: none;
+    font-size: 16;
+    color: #134617;
+    padding: 20px 45px 20px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(103, 160, 104);
+    margin-left: 20px;
+    width: 90%;
+
+}
+/* mexe nas cores do"digite seu e-mail" */
+.input-box input::placeholder{
+    color: #1b8938;
+
+}
+.botaoEntrar{
+    margin-left: 20px;
+    width: 90%;
+    background-color: rgb(11, 192, 11);
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    
+}
+.botaoEntrar:hover{
+    background-color: rgb(11, 219, 46);
+    cursor: pointer;
+}
+
+.esquecerSenha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0f8402;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 90%;
+}
+
+.esquecerSenha:hover{
+    text-decoration: underline;
+}
+
+.botaoCadastro{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #fff;
+    background-color: hsl(165, 75%, 35%);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 20px;
+    width: 90%;
+
+}
+.botaoCadastro:hover{
+    background-color:hsl(165, 78%, 43%) ;
+}
