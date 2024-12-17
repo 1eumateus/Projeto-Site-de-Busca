@@ -6,8 +6,6 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('./models/user');
-const MONGO_URI = process.env.MONGO_URI;
-const FRONT_URL = process.env.FRONTEND_URL;
 
 const app = express();
 const PORT = process.env.PORT;
@@ -45,17 +43,24 @@ const authMiddleware = (req, res, next) => {
 
 // Rota de Registro
 app.post('/register', async (req, res) => {
+    console.log('Dados recebidos pelo servidor:', req.body);
+
     const { firstName, email, password } = req.body;
+
+    if (!firstName || !email || !password) {
+        return res.status(400).json({ message: 'Todos os campos são obrigatórios.' });
+    }
 
     try {
         const existingUser = await User.findOne({ email });
-
         if (existingUser) {
-            return res.status(400).json({ message: 'Usuário já cadastrado' });
+            console.error('Usuário já registrado:', email);
+            return res.status(400).json({ message: 'Usuário já cadastrado.' });
         }
 
         if (password.length < 6) {
-            return res.status(400).json({ message: 'A senha deve ter no mínimo 6 caracteres' });
+            console.error('Senha muito curta:', password);
+            return res.status(400).json({ message: 'A senha deve ter pelo menos 6 caracteres.' });
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -67,12 +72,15 @@ app.post('/register', async (req, res) => {
         });
 
         await newUser.save();
-        res.status(201).json({ message: 'Usuário registrado com sucesso' });
+        console.log('Usuário registrado com sucesso:', newUser);
 
+        res.status(201).json({ message: 'Usuário registrado com sucesso' });
     } catch (error) {
-        res.status(500).json({ message: 'Erro no servidor', error });
+        console.error('Erro no servidor ao registrar usuário:', error);
+        res.status(500).json({ message: 'Erro interno do servidor', error: error.message });
     }
 });
+
 
 
 
