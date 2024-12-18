@@ -24,7 +24,7 @@
     display: inline;
     align-content: center;
     justify-content: center;
-    width: 1500px;
+    width: 1250px;
     padding-left: 25%;
 
 }
@@ -36,19 +36,35 @@
     padding-left: 10px;
     
 }
+.favorito{
+    display: flex;
+    height: 33px;
+    margin-top: 21px;
+    background-color: transparent; 
+    border: none; 
+    color: rgb(196, 111, 0);
+    cursor: pointer;
+
+    
+}
+
 .third-column{
-    width: 30%;
+    width: 109px;
+
     align-content: center;
+    align-items: center;
     text-align: center;
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 18px;
-    padding-right: 20px;
+   
     
 }
+
 .submit{
     margin-left: -30px;
     color: rgb(52, 137, 40);
+    
 }
 .saudacao{
     display: flex;

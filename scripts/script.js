@@ -42,8 +42,6 @@ document.getElementById('loginForm').onsubmit = async function (event) {
     event.preventDefault();
     const email = document.getElementById('loginEmail').value;
     const password = document.getElementById('loginPassword').value;
-    console.log(email);
-    console.log(password);
 
     const response = await fetch('http://localhost:3000/login', {
         method: 'POST',
@@ -60,8 +58,7 @@ document.getElementById('loginForm').onsubmit = async function (event) {
         // localStorage.setItem('firstName', result.firstName);
 
         // showUserName(result.firstName);
-        // loginModal.style.display = 'none';
-        console.log("entrou");
+        // loginModal.style.display = 'none';cons
     } else {
         alert(result.message);
     }
